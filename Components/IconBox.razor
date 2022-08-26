@@ -1,0 +1,19 @@
+<li>
+    <input id="@IconLabel-@IconName" type="@IconType" name="@IconName" checked="@IconChecked"/>
+    <label for="@IconLabel-@IconName">
+        <span class="svg-icon">
+            <Icons IconType="@IconLabel" />
+        </span>
+        @IconLabel
+    </label>
+</li>
+@code{
+    [Parameter]
+    public string IconLabel {get;set;}
+    [Parameter]
+    public string IconName {get;set;}
+    [Parameter]
+    public bool IconChecked {get;set;}
+    [Parameter]
+    public string IconType {get;set;}
+}

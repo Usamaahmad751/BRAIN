@@ -1,0 +1,69 @@
+@page "/networks"
+
+<div class="networks-wrapper">
+  <div class="network-navigation">
+    <div class="options-wrapper">
+      <ul>
+
+        <IconBox IconLabel="Contacts" IconName="network" IconType="radio" />
+        <IconBox IconLabel="Dialpad" IconName="network" IconChecked="true" IconType="radio" />
+        <IconBox IconLabel="Messages" IconName="network" IconType="radio" />
+        <IconBox IconLabel="Wifi" IconName="network" IconType="radio" />
+        <IconBox IconLabel="Bluetooth" IconName="network" IconType="radio" />
+        <IconBox IconLabel="Connect Devices" IconName="network" IconType="radio" />
+
+      </ul>
+    </div>
+  </div>
+  <div class="network-content">
+    <div class="dialpad-wrapper">
+      <div class="dialpad-field-wrapper">
+        <span class="dialpad-field">
+          @foreach (var number in dialField)
+          {
+            @number
+          }
+        </span>
+        @if (dialField.Count != 0)
+        {
+          <button class="remove-btn" @onclick="removeDialNumber">
+            <Icons IconType="Cross" />
+          </button>
+        }
+      </div>
+      <div class="dialpad-buttons">
+        @for (var i = 1; i < 10; i++)
+        {
+          string j = i.ToString();
+          <button class="dialpad-btn" @onclick="@( () => handleDialPad(j))" value="@i" name="@i" id="@i">@i</button>
+        }
+        <button class="dialpad-btn" @onclick='() => handleDialPad("*")' value="*" name="*" id="*">*</button>
+        <button class="dialpad-btn" @onclick='() => handleDialPad("0")' value="0" name="0" id="0">0</button>
+        <button class="dialpad-btn" @onclick='() => handleDialPad("#")' value="#" name="#" id="#">#</button>
+
+        <button class="dialpad-btn svg-icon" value="add">
+          <Icons IconType="Add Contact" />
+        </button>
+        <button class="dialpad-btn svg-icon" value="call">
+          <Icons IconType="Call" />
+        </button>
+        <button class="dialpad-btn" @onclick="clearDialNumber" value="clear">C</button>
+      </div>
+    </div>
+  </div>
+</div>
+@code {
+  List<string> dialField = new List<string>();
+  public void handleDialPad(string i)
+  {
+    dialField.Add(i);
+  }
+  public void removeDialNumber()
+  {
+    dialField.RemoveAt(dialField.Count - 1);
+  }
+  public void clearDialNumber()
+  {
+    dialField.Clear();
+  }
+}

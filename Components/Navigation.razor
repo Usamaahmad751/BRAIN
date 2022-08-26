@@ -1,0 +1,55 @@
+
+<div class="navigation-wrapper">
+    <ul>
+        @foreach (var item in navItems)
+        {
+            <Navigationitem NavItem="@item" />
+        }
+    </ul>
+</div>
+@code{
+  
+      private List<NavItems> navItems;
+        protected override void OnInitialized(){
+            base.OnInitialized();
+            navItems = new List<NavItems>{
+            new  NavItems{
+                NavItemName = "Overview",
+                NavItemLink = "/",
+                NavItemIcon = "Speedometer"
+            },  
+             new  NavItems{
+                NavItemName = "Drive Controls",
+                NavItemLink = "/drive-controls",
+                NavItemIcon = "Steering" 
+            },
+            new  NavItems{
+                NavItemName = "Engine Configuration",
+                NavItemLink = "/engine-configuration",
+                NavItemIcon = "Engine" 
+            },
+            new  NavItems{
+                NavItemName = "Navigation",
+                NavItemLink = "/navigation",
+                NavItemIcon = "Navigation" 
+            },
+            new  NavItems{
+                NavItemName = "Phone & Networks",
+                NavItemLink = "/networks",
+                NavItemIcon = "Phone" 
+            },
+            
+            new  NavItems{
+                NavItemName = "Entertainment",
+                NavItemLink = "/entertainment",
+                NavItemIcon = "Entertainment" 
+            },
+            new  NavItems{
+                NavItemName = "Voice",
+                NavItemLink = "/voice",
+                NavItemIcon = "Mic" 
+            }
+
+            };
+        }
+}

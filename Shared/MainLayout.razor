@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS
+<PageTitle>BRAIN DEMO</PageTitle>
+<NavigationPanel />
+<article>
+    <div class="configuration-panel-wrapper">
+        <TopBar /> 
+        <div class="initialScreen-wrapper">
+            <div class="initialScreen">
+                <h1>Welcome Onboard!</h1>
+                <p>Please wait for few seconds while I am adjusting the environment for your convenient drive.</p>
+                <div class="initialScreenIcons-wrapper">
+                    <div class="steering-wrapper initial-steps" id="step-1">
+                        <Icons IconType="Steering" />
+                        <p>Adjusting Steering...</p>
+                    </div>
+                    <div class="seat-wrapper initial-steps hide" id="step-2">
+                        <Icons IconType="Seat" />
+                         <hr>
+                         <p >Adjusting Your Seat ...</p>
+                    </div>
+                    <div class="air-wrapper initial-steps hide" id="step-3">
+                        <Icons IconType="Air" />
+                        <p>Making Climate of Your Choice...</p>
+                    </div>
+                    
+                    
+                    <div id="step-4" class="all-set initial-steps hide">
+                        <Icons IconType="Tick" />
+                         <p >All Set. Your Car is Ready to Take you on a Drive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="configuration-panel">
+            @Body
+        </div>
+     
+    </div>
+</article>
+<Popupinfo />

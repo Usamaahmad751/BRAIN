@@ -1,0 +1,248 @@
+@page "/engine-configuration"
+@inject IJSRuntime JS
+<div class="engine-config-wrapper">
+    <div class="drive-controls">
+        <h3 class="controls-heading">Engine Settings</h3>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Auto Shift out of Park
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+            <span class="option-info">
+                When parked, automatically shifts to D or R when doors are closed, driver's seat belt is buckled and
+                brake is pressed.
+            </span>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Prompt Engine heatup Warnings
+            </label>
+            <ul>
+                <IconBox IconLabel="Always" IconType="radio" IconName="engineWarning" IconChecked="true" />
+                <IconBox IconLabel="Never" IconName="engineWarning" IconType="radio" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Stop Engine on Warnings
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+            <span class="option-info">
+                Stop the engine incase of any emergency warning i.e fault in braking system or engine heatup.
+            </span>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Wheel Drive
+            </label>
+            <ul>
+                <IconBox IconLabel="Front Wheels" IconType="radio" IconName="wheeldrive" IconChecked="true" />
+                <IconBox IconLabel="Rear Wheels" IconName="wheeldrive" IconType="radio" />
+                <IconBox IconLabel="All Wheels Drive" IconName="wheeldrive" IconType="radio" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Engine Perfomance Mode
+            </label>
+            <ul>
+                <IconBox IconLabel="Efficiency Mode" IconType="radio" IconName="perfomancemood" IconChecked="true" />
+                <IconBox IconLabel="Sport Mode" IconName="perfomancemood" IconType="radio" />
+                <IconBox IconLabel="Power Mode" IconName="perfomancemood" IconType="radio" />
+            </ul>
+        </div>
+    </div>
+    <div class="autopilot-controls">
+        <h3 class="controls-heading">Suspension Settings</h3>
+
+        <div class="options-wrapper">
+            <label class="option-label">
+                Adaptive Suspension Damping
+            </label>
+            <ul>
+                <IconBox IconLabel="Comfort" IconType="radio" IconName="suspensiondamping" IconChecked="true" />
+                <IconBox IconLabel="Sport" IconName="suspensiondamping" IconType="radio" />
+                <IconBox IconLabel="Auto " IconName="suspensiondamping" IconType="radio" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Ride Height
+            </label>
+            <ul>
+                <IconBox IconLabel="Very High" IconType="radio" IconName="rideHeight" IconChecked="true" />
+                <IconBox IconLabel="High" IconName="rideHeight" IconType="radio" />
+                <IconBox IconLabel="Medium" IconName="rideHeight" IconType="radio" />
+                <IconBox IconLabel="Low" IconName="rideHeight" IconType="radio" />
+            </ul>
+        </div>
+        <div class="options-wrapper suspension">
+            <label class="option-label">
+               Front Left
+            </label>
+            
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Compression
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Damping
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+        </div>
+                <div class="options-wrapper suspension">
+            <label class="option-label">
+               Front Right
+            </label>
+            
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Compression
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Damping
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+        </div>
+                <div class="options-wrapper suspension">
+            <label class="option-label">
+               Rear left
+            </label>
+            
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Compression
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Damping
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+        </div>
+                <div class="options-wrapper suspension">
+            <label class="option-label">
+               Rear Right
+            </label>
+            
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Compression
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    Damping
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+        </div>
+    </div>
+    <div class="inteerior-controls">
+        <h3 class="controls-heading">General Settings</h3>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                   Enable Convenient Access 
+                   <span class="svg-icon info-icon" @onclick='() => openPopup("When approaching the parked car, the vehicle recognizes and welcomes the driver with window projections. The user makes a gesture to signal the desire to enter. The door opens automatically. At the same time, the steering wheel lowers into the dashboard and the seat adjusts automatically to make boarding easier.")'>
+                    <Icons IconType="info" />
+                </span>
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Show Engine Oil Warning 
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Fog Lights
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Auto High Beam
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+        <h3 class="controls-heading">Import/Export Settings</h3>
+        <span class="option-info">
+        You can import or export your vechile configurations to/from another vehicle by connecting it to a Brose Cloud Account. Your desired driving style and engine configuration will be applied to another vehicle on a single click.
+        </span>
+        <div class="connect-cloud-btn">
+            <button>Connect to the Cloud</button>
+            <label for="choseFile">Select Folder/File</label>
+            <input id="choseFile"type="file" style="display: none;" />
+        </div>
+        <div class="import-export-wrapper">
+            <button class="import">Import</button>
+            <button class="export">Export</button>
+        </div>
+               <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Allow Sync
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+@code{
+    
+    public async Task openPopup(string message){
+        await JS.InvokeVoidAsync("openPopup" , message);
+    }
+}

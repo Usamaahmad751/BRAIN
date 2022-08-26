@@ -1,0 +1,116 @@
+@inject IJSRuntime JS
+<ul>
+    <li class="quick-control-option">
+        <div class="switch-wrapper">
+            <label class="option-label">
+                Intelligent Locking
+                <span class="svg-icon info-icon" @onclick='() => openPopup("Your side doors, frunk and trunk will be locked automatically when you start driving or in parking mode. Its a feature to ensure your safety and theft protection.")'>
+                    <Icons IconType="info" />
+                </span>
+            </label>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </li>
+    <li class="quick-control-option">
+        <div class="switch-wrapper">
+            <label class="option-label">
+                Exterior Lights
+            </label>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="options-wrapper">
+            <ul>
+                <IconBox IconLabel="Parking" IconType="radio" IconName="lights" IconChecked="true" />
+                <IconBox IconLabel="Auto " IconName="lights" IconType="radio" />
+                <IconBox IconLabel="High" IconName="lights" IconType="radio" />
+            </ul>
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    <Icons IconType="Light" />
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+        </div>
+    </li>
+    <li class="quick-control-option">
+        <div class="switch-wrapper">
+            <label class="option-label">
+                Climate
+            </label>
+            <span class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </span>
+        </div>
+        <div class="options-wrapper">
+            <ul>
+                 <IconBox IconLabel="Auto" IconName="climate" IconType="radio" />
+                 <IconBox IconLabel="Sync" IconName="climate" IconChecked="true" IconType="radio" />
+                 <IconBox IconLabel="Custom" IconName="climate" IconType="radio"/>
+            </ul>
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    <Icons IconType="Fan" />
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+        </div>
+    </li>
+        <li class="quick-control-option">
+        <div class="switch-wrapper">
+            <label class="option-label">
+               Auto Drive Mode
+               <span class="svg-icon info-icon" @onclick='() => openPopup("While AutoPilot driving you can choose your desired adjustments for seating, steering , lights, and climate according to your mood.")'>
+                    <Icons IconType="info" />
+              </span>
+            </label>
+            <span class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </span>
+        </div>
+        <div class="options-wrapper">
+            <ul>
+                 <IconBox IconLabel="Work" IconName="autodrive" IconChecked="true" IconType="radio" />
+                 <IconBox IconLabel="Relax" IconName="autodrive" IconType="radio"/>
+                 <IconBox IconLabel="Party" IconName="autodrive" IconType="radio" />
+            </ul>
+        </div>
+    </li>
+        <li class="quick-control-option">
+        <div class="switch-wrapper">
+            <label class="option-label">
+                Wifi
+            </label>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </li>
+        <li class="quick-control-option">
+        <div class="switch-wrapper">
+            <label class="option-label">
+                Bluetooth
+            </label>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </li>
+</ul>
+@code{
+    
+    public async Task openPopup(string message){
+        await JS.InvokeVoidAsync("openPopup" , message);
+    }
+}

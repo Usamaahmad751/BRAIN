@@ -1,0 +1,16 @@
+@inject IJSRuntime JS
+<div class="popup-wrapper" >
+    <div class="popup">
+        <div class="popup-text">
+            
+        </div>
+        <button class="popup-btn" @onclick="closePopup">
+            OK
+        </button>
+    </div>
+</div>
+@code {
+    public async Task closePopup(){
+        await JS.InvokeVoidAsync("closePopup");
+    }
+}

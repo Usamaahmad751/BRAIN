@@ -1,0 +1,20 @@
+<span class="current-date">@formatedDate</span>
+
+@code{
+    private DateTime date = DateTime.Now;
+    private string  formatedDate = DateTime.Now.ToString("f") ;
+    protected override async Task OnInitializedAsync()
+{
+   var timer = new Timer(new TimerCallback(_ =>
+        {
+           date = DateTime.Now;
+           formatedDate =   date.ToString("f");
+           InvokeAsync(() =>
+                {
+
+                    StateHasChanged();
+                });
+        }), null, 1000, 1000);
+}
+
+}

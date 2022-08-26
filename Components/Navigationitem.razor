@@ -1,0 +1,10 @@
+<li class="nav-item">
+    <NavLink Match=NavLinkMatch.All href="@NavItem.NavItemLink">
+         <Icons IconType="@NavItem.NavItemIcon" />
+        <span>@NavItem.NavItemName</span>
+    </NavLink>
+</li>
+@code{
+    [Parameter]
+    public NavItems NavItem {get; set;}
+}

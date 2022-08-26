@@ -1,0 +1,264 @@
+@page "/drive-controls"
+@inject IJSRuntime JS
+<div class="drive-controls-wrapper">
+    <div class="drive-controls">
+        <h3 class="controls-heading">Padel & steering</h3>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Intelligent steering adjustment
+                    <span class="svg-icon info-icon" @onclick='() => openPopup("While entering or leaving the car steering will adjust itself automatically to make more space for you so you can sit or leave with ease. It will be then adjusted to your desired postion when you are ready to drive. ")'>
+                        <Icons IconType="info" />
+                    </span> 
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+            <span class="option-info">
+                While entering into the car steering will adjust itself automatically according to your driving style.
+            </span>
+        </div>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Steering wheel Lights
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+        <div class="options-wrapper">
+            <span class="switch-wrapper">
+                <label class="option-label">
+                    Slip Start
+                </label>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </span>
+            <span class="option-info">
+                Use to help free vehicle stuck in snow, sand or mud.
+            </span>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Acceleration
+            </label>
+            <ul>
+                <IconBox IconLabel="Chill" IconType="radio" IconName="acceleration" IconChecked="true" />
+                <IconBox IconLabel="Standard" IconName="acceleration" IconType="radio" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Steering Mode
+            </label>
+            <ul>
+                <IconBox IconLabel="Comfort" IconType="radio" IconName="steering" IconChecked="true" />
+                <IconBox IconLabel="Standard " IconName="steering" IconType="radio" />
+                <IconBox IconLabel="Sport" IconName="steering" IconType="radio" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Regenrative Braking
+               
+            </label>
+            <ul>
+                <IconBox IconLabel="Low" IconType="radio" IconName="braking" IconChecked="true" />
+                <IconBox IconLabel="Normal" IconName="braking" IconType="radio" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Stopping Mode
+                
+            </label>
+            <ul>
+                <IconBox IconLabel="Creep" IconName="Stopping" IconType="radio" />
+                <IconBox IconLabel="Roll" IconType="radio" IconName="Stopping" IconChecked="true" />
+                <IconBox IconLabel="Hold" IconType="radio" IconName="Stopping" />
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="autopilot-controls">
+        <h3 class="controls-heading">Autopilot controls</h3>
+
+        <div class="options-wrapper">
+            <span class="switch-wrapper">
+                <label class="option-label">
+                    Auto Steer
+                </label>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </span>
+            <span class="option-info">
+                Your car will intellegently move the steering and you dont need to hold the steer.
+            </span>
+        </div>
+
+        <div class="options-wrapper">
+            <label class="option-label">
+                Enable at start of Every Trip
+            </label>
+            <ul>
+                <IconBox IconLabel="Yes" IconName="trip" IconType="radio" />
+                <IconBox IconLabel="No" IconType="radio" IconName="trip" IconChecked="true" />
+
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Require Lane changing confirmation?
+            </label>
+            <ul>
+                <IconBox IconLabel="Yes" IconName="lanechangingconfirmation" IconType="radio" IconChecked="true" />
+                <IconBox IconLabel="No" IconType="radio" IconName="lanechangingconfirmation" />
+
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Speed based line changes
+            </label>
+            <ul>
+                <IconBox IconLabel="Mild" IconName="linechanges" IconType="radio" />
+                <IconBox IconLabel="Average" IconType="radio" IconName="linechanges" />
+                <IconBox IconLabel="Mad Max" IconType="radio" IconName="linechanges" IconChecked="true" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Speed Limit Warning
+            </label>
+            <ul>
+                <IconBox IconLabel="Off" IconName="speedwarning" IconType="radio" />
+                <IconBox IconLabel="Display" IconType="radio" IconName="speedwarning" IconChecked="true" />
+                <IconBox IconLabel="Chime" IconType="radio" IconName="speedwarning" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Speed Limit
+            </label>
+            <ul>
+                <IconBox IconLabel="Relative" IconName="speed-limit" IconType="radio" IconChecked="true" />
+                <IconBox IconLabel="Absolute" IconType="radio" IconName="speed-limit" />
+            </ul>
+        </div>
+    </div>
+    <div class="inteerior-controls">
+        <h3 class="controls-heading"> Interior adjustments</h3>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Intelligent Driver seat adjustments
+                    <span class="svg-icon info-icon" @onclick='() => openPopup("Driver seat will be adjustment automatically according to driving style to make boarding easier.")'>
+                    <Icons IconType="info" />
+                </span>
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+        <div class="options-wrapper">
+            <div class="switch-wrapper">
+                <label class="option-label">
+                    Intelligent Armrest adjustment
+                    <span class="svg-icon info-icon"@onclick='() => openPopup("Armrests will be adjustment automatically according to driving style to make boarding easier.")'>
+                    <Icons IconType="info" />
+                </span>
+                </label>
+                <span class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+
+        <div class="options-wrapper">
+
+            <label class="option-label">
+                Notification for Motorway Exit
+                <span class="svg-icon info-icon" @onclick='() => openPopup("When you are relaxing and needs to take control of a semi-autonomous vehicle again. If the navigation indicates that there is an upcoming motorway exit, the system will inform you using optical signals or seat vibrations or by simple voice message.")'>
+                    <Icons IconType="info" />
+                </span>
+            </label>
+            <ul>
+                <IconBox IconLabel="Seat Vibration" IconName="motowayExit" IconType="radio" />
+                <IconBox IconLabel="Optical Signal" IconType="radio" IconName="motowayExit" IconChecked="true" />
+                <IconBox IconLabel="Voice Message" IconType="radio" IconName="motowayExit" />
+            </ul>
+            <span class="option-info">
+                While taking control back into your hands Navigation will notify you if there is a quick exit on
+                Motoway.
+            </span>
+        </div>
+
+        <div class="options-wrapper">
+            <label class="option-label">
+                Interior Lights
+            </label>
+            <ul>
+                <IconBox IconLabel="Back" IconName="interriorlights" IconType="radio" />
+                <IconBox IconLabel="Front" IconType="radio" IconName="interriorlights" IconChecked="true" />
+                <IconBox IconLabel="Both" IconType="radio" IconName="interriorlights" />
+            </ul>
+            <div class="range-slider">
+                <span class="svg-icon info-icon">
+                    <Icons IconType="Light" />
+                </span> <input type="range" name="intensity" class="intensity" value="50" />
+            </div>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Car Left Open Notification
+            </label>
+            <ul>
+                <IconBox IconLabel="Off" IconName="carOpen" IconType="radio" />
+                <IconBox IconLabel="Doors" IconType="radio" IconName="carOpen" IconChecked="true" />
+                <IconBox IconLabel="Doors & windows" IconType="radio" IconName="carOpen" />
+            </ul>
+        </div>
+        <div class="options-wrapper">
+            <label class="option-label">
+                Interior Light Mode
+                <span class="svg-icon info-icon" @onclick='() => openPopup("Change the interior lights according to your color of choice. Or simply choose party(RGB) mode to make party inside your car.")'>
+                    <Icons IconType="info" />
+                </span>
+            </label>
+            <ul>
+                <IconBox IconLabel="Off" IconName="lightMode" IconType="radio" />
+                <IconBox IconLabel="Single color" IconType="radio" IconName="lightMode" IconChecked="true" />
+                <IconBox IconLabel="Party (RGB colors)" IconType="radio" IconName="lightMode" />
+            </ul>
+
+        </div>
+    </div>
+</div>
+    
+@code{
+    
+    public async Task openPopup(string message){
+        await JS.InvokeVoidAsync("openPopup" , message);
+    }
+}

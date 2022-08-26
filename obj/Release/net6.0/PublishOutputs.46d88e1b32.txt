@@ -1,0 +1,7 @@
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/obj/Release/net6.0/PubTmp/Out/BlazorApp
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/obj/Release/net6.0/PubTmp/Out/appsettings.Development.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/obj/Release/net6.0/PubTmp/Out/appsettings.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/obj/Release/net6.0/PubTmp/Out/BlazorApp.dll
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/obj/Release/net6.0/PubTmp/Out/BlazorApp.deps.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/obj/Release/net6.0/PubTmp/Out/BlazorApp.runtimeconfig.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/obj/Release/net6.0/PubTmp/Out/BlazorApp.pdb

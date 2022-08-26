@@ -1,0 +1,30 @@
+@inject IJSRuntime JS
+<div class="push-btn-wrapper">
+    <button  class="push-btn" @onclick="(() => switchEngine())">@pushStartBtn</button>
+</div>
+@code{
+    
+    public string name = "Usama";
+    private bool pushStart = false;
+    private string pushStartBtn = "Engine Start";
+    public async Task switchEngine(){
+        if(pushStart){
+            stopEngine();
+            pushStartBtn = "Engine Start";
+            pushStart = false;
+        }
+        else{
+            startEngine();
+            Thread.Sleep(1500);
+            pushStartBtn = "Engine STOP";
+            pushStart = true;
+        }
+    }
+    public async Task stopEngine(){
+        await JS.InvokeVoidAsync("stopIgnition");
+    }
+    public async Task startEngine(){
+        await JS.InvokeVoidAsync("startIgnition");
+        
+    }
+}

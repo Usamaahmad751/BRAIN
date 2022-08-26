@@ -1,0 +1,7 @@
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/bin/Debug/net6.0/publish/BlazorApp
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/bin/Debug/net6.0/publish/appsettings.Development.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/bin/Debug/net6.0/publish/appsettings.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/bin/Debug/net6.0/publish/BlazorApp.dll
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/bin/Debug/net6.0/publish/BlazorApp.deps.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/bin/Debug/net6.0/publish/BlazorApp.runtimeconfig.json
+/Users/usamaahmad/Desktop/Development/C#/myapp/BlazorApp/bin/Debug/net6.0/publish/BlazorApp.pdb
