@@ -1,20 +1,24 @@
 ﻿<Properties StartupConfiguration="{41711AD1-0769-43DA-BD58-E2C980CABFBC}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.BlazorApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/site.css">
     <Files>
       <File FileName="Components/IconBox.razor" Line="7" Column="19" />
       <File FileName="Program.cs" Line="18" Column="2" />
+      <File FileName="wwwroot/css/site.css" Line="700" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BlazorApp" expanded="True">
             <Node name="BlazorApp" expanded="True">
+              <Node name="Components" expanded="True" />
               <Node name="Pages" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="Shared" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -24,7 +28,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.BlazorApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
